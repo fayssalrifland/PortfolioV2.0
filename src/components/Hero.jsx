@@ -78,7 +78,7 @@ const Hero = () => {
                     </motion.button>
 
                     <div className="flex gap-6 flex-row text-4xl md:text-6xl text-purple-400 z-20">
-                        <motion.a whileHover={{ scale: 1.2 }} href="https://www.instagram.com/madara_fayssal/">
+                        <motion.a whileHover={{ scale: 1.2 }} href="https://github.com/fayssalrifland">
                             <AiOutlineGithub/>
                         </motion.a>
 
@@ -86,7 +86,7 @@ const Hero = () => {
                             <AiOutlineLinkedin/>
                         </motion.a>
 
-                        <motion.a whileHover={{ scale: 1.2 }} href="#">
+                        <motion.a whileHover={{ scale: 1.2 }} href="https://www.instagram.com/madara_fayssal/">
                             <AiOutlineInstagram/>
                         </motion.a>
                     </div>
