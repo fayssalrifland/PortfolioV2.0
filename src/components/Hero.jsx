@@ -2,6 +2,7 @@ import React from "react";
 import profilepic from "../assets/profpic.png";
 import { TypeAnimation } from "react-type-animation";
 import ShinyEffect from "./ShinyEffect";
+import CV from '../assets/CV-simple.pdf';
 import {
   AiOutlineGithub,
   AiOutlineInstagram,
@@ -72,7 +73,16 @@ const Hero = () => {
                 >
                     <motion.button whileHover={{ scale: 1.05, boxShadow: "0px 0px 8px rgba(0, 0, 0, 0.3)" }}
                         className="z-10 cursor-pointer font-bold text-gray-200 md:w-auto p-4 border
-                                     border-purple-400 rounded-xl"     
+                                     border-purple-400 rounded-xl"  
+                                     onClick={() => {
+                        // Create an anchor element
+                        const link = document.createElement('a');
+                        link.href = CV;
+                        link.setAttribute('download', 'CV-simple.pdf'); // This will be the downloaded file name
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+    }}   
                     >
                         Download CV
                     </motion.button>
