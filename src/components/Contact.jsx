@@ -1,4 +1,4 @@
-import React from 'react'
+import 'react'
 import { AiFillLinkedin, AiFillGithub  } from 'react-icons/ai'
 import { motion } from 'framer-motion'
 
