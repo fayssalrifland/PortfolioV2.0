@@ -16,6 +16,7 @@ const projects = [
       site: "#",
       github: "#",
     },
+    price:15,
   },
   {
     img: project2,
@@ -25,6 +26,7 @@ const projects = [
       site: "#",
       github: "#",
     },
+    price:20,
   },
   {
     img: project4,
@@ -34,6 +36,7 @@ const projects = [
       site: "#",
       github: "#",
     },
+    price:50,
   },
   {
     img: project5,
@@ -43,6 +46,7 @@ const projects = [
       site: "#",
       github: "#",
     },
+    price:70,
   },
   {
     img: project6,
@@ -52,6 +56,7 @@ const projects = [
       site: "#",
       github: "#",
     },
+    price:120,
   },
 ];
 
@@ -84,17 +89,28 @@ const Portfolio = () => {
             </h3>
             <p className="text-gray-300 mb-4">{project.description}</p>
             <div className="flex space-x-4">
-              <a
-                href={project.links.site}
-                className="px-4 py-2 bg-slate-600 text-gray-200 rounded-lg hover:bg-slate-700 transition duration-300"
-              >
-                View Site
-              </a>
+            <motion.a
+      href={project.links.site}
+      target="_blank"
+      rel="noopener noreferrer"
+      whileHover={{
+        boxShadow: "0px 4px 15px rgba(109, 40, 217, 0.4)",
+        y: -2,
+      }}
+      transition={{ duration: 0.1 }}
+      className="px-4 py-2 bg-white/10 backdrop-blur-lg border border-purple-500 text-white rounded-lg uppercase font-medium hover:bg-white/20 transition duration-300"
+    >
+      View Site
+    </motion.a>
               <a
                 href={project.links.github}
-                className="px-4 py-2 bg-slate-600 text-gray-200 rounded-lg hover:bg-slate-700 transition duration-300"
+                whileHover={{
+                  boxShadow: "0px 4px 15px rgba(109, 40, 217, 0.4)",
+                  y: -2,
+                }}
+                className="px-4 py-2 bg-white/10 backdrop-blur-lg border border-purple-500 text-white rounded-lg uppercase font-medium hover:bg-white/20 transition duration-300"
               >
-                <AiOutlineGithub />
+                {project.price }$
               </a>
             </div>
           </div>
