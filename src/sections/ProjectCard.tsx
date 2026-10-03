@@ -90,7 +90,7 @@ export default function ProjectCard({ project, delay = 0 }: ProjectCardProps) {
               style={{ background: "var(--color-accent)" }}
             >
               <ExternalLink size={15} />
-              Live Demo
+              {project.demoLabel ?? "Live Demo"}
             </a>
           </div>
         </div>

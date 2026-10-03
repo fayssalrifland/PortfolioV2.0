@@ -1,4 +1,9 @@
-export type ProjectCategory = "Frontend" | "Full Stack" | "Web Apps" | "UI / UX";
+export type ProjectCategory =
+  | "Frontend"
+  | "Full Stack"
+  | "Web Apps"
+  | "UI / UX"
+  | "Browser Extension";
 
 export interface Project {
   slug: string;
@@ -11,6 +16,7 @@ export interface Project {
   features: string[];
   github: string;
   demo: string;
+  demoLabel?: string;
 }
 
 export const projects: Project[] = [
@@ -79,6 +85,28 @@ export const projects: Project[] = [
     github: "https://github.com/fayssal-elbouhamedy/dev-productivity-tool",
     demo: "https://devtool-demo.fayssal-elbouhamedy.dev",
   },
+  {
+    slug: "browser-extension",
+    name: "Browser Extension",
+    description:
+      "A lightweight browser extension built to automate a repetitive browsing task directly inside the browser toolbar, with a simple popup interface and persistent settings.",
+    problem:
+      "Repeating the same manual action across websites wastes time during a regular browsing session. This extension adds a one-click tool in the toolbar that handles the task instantly, without leaving the current page.",
+    image: "/images/project-extension.jpg",
+    categories: ["Browser Extension", "Frontend"],
+    technologies: ["JavaScript", "HTML", "CSS", "Chrome Extension API"],
+    features: [
+      "Toolbar popup built with vanilla JavaScript, HTML and CSS",
+      "Content script that interacts with the active page in real time",
+      "Persistent user settings via the browser storage API",
+      "Manifest V3 configuration for modern browser compatibility",
+      "Lightweight bundle with no unnecessary dependencies",
+      "Simple, distraction-free interface for quick actions",
+    ],
+    github: "https://github.com/fayssal-elbouhamedy/browser-extension",
+    demo: "https://chromewebstore.google.com/",
+    demoLabel: "Web Store",
+  },
 ];
 
 export const projectFilters: Array<"All" | ProjectCategory> = [
@@ -87,4 +115,5 @@ export const projectFilters: Array<"All" | ProjectCategory> = [
   "Full Stack",
   "Web Apps",
   "UI / UX",
+  "Browser Extension",
 ];
